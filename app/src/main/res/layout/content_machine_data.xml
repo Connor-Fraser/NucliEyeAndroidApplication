@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_machine_data"
+    tools:context="cfrase49.nuclieyemapstest.MachineDataActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TableRow
+            android:layout_height="0px"
+            android:layout_weight="3.6">
+            <RelativeLayout android:id="@+id/TempLayout"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:onClick="metricHistory">
+
+                <TextView android:id="@+id/TempHeader"
+                    style="@style/headingStyle"
+                    android:text="@string/temp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView android:id="@+id/TempValue"
+                    style="@style/valueStyle"
+                    android:layout_below="@id/TempHeader" />
+
+                <TextView android:id="@+id/TempThreshold"
+                    style="@style/alertStyle"
+                    android:layout_toRightOf="@id/TempValue"
+                    android:layout_below="@id/TempHeader"/>
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/HumidityLayout"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/TempLayout"
+                android:onClick="metricHistory">
+
+                <TextView android:id="@+id/HumidityHeader"
+                    style="@style/headingStyle"
+                    android:text="@string/humidity"
+                    android:layout_alignParentTop="true" />
+
+                <TextView android:id="@+id/HumidityValue"
+                    style="@style/valueStyle"
+                    android:layout_below="@id/HumidityHeader" />
+
+                <TextView android:id="@+id/HumidityThreshold"
+                    style="@style/alertStyle"
+                    android:layout_toRightOf="@id/HumidityValue"
+                    android:layout_below="@id/HumidityHeader"/>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0px"
+            android:layout_weight="3.6">
+
+            <RelativeLayout android:id="@+id/RadiationLayout"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:onClick="metricHistory">
+
+                <TextView android:id="@+id/RadiationHeader"
+                    style="@style/headingStyle"
+                    android:text="@string/radiation"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView android:id="@+id/RadiationValue"
+                    style="@style/radValueStyle"
+                    android:layout_below="@id/RadiationHeader" />
+
+                <TextView android:id="@+id/RadiationThreshold"
+                    style="@style/radAlertStyle"
+                    android:layout_toRightOf="@id/RadiationValue"
+                    android:layout_below="@id/RadiationHeader"/>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0px"
+            android:layout_weight="4.8">
+
+            <RelativeLayout android:id="@+id/CoLayout"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:onClick="metricHistory">
+
+                <TextView android:id="@+id/CoHeader"
+                    style="@style/headingStyle"
+                    android:text="@string/co"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView android:id="@+id/CoValue"
+                    style="@style/valueStyle"
+                    android:layout_below="@id/CoHeader" />
+
+                <TextView android:id="@+id/CoThreshold"
+                    style="@style/alertStyle"
+                    android:layout_toRightOf="@id/CoValue"
+                    android:layout_below="@id/CoHeader"/>
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/Co2Layout"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/CoLayout"
+                android:onClick="metricHistory">
+
+                <TextView android:id="@+id/Co2Header"
+                    style="@style/headingStyle"
+                    android:text="@string/co2"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView android:id="@+id/Co2Value"
+                    style="@style/valueStyle"
+                    android:layout_below="@id/Co2Header" />
+
+                <TextView android:id="@+id/Co2Threshold"
+                    style="@style/alertStyle"
+                    android:layout_toRightOf="@id/Co2Value"
+                    android:layout_below="@id/Co2Header"/>
+            </RelativeLayout>
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/majorHeadingStyle"
+                android:paddingBottom="0dp"
+                android:textStyle="normal"
+                android:text="@string/timestamp" />
+
+            <TextView android:id="@+id/timestampValue"
+                style="@style/majorHeadingStyle"
+                android:textStyle="normal"
+                android:layout_weight="1"
+                android:layout_width="0px" />
+
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
