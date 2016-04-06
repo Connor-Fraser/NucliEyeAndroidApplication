@@ -30,8 +30,6 @@ import cfrase49.nuclieyemapstest.APICalls.Get.HistoryCallResults;
 import cfrase49.nuclieyemapstest.APICalls.Put.APIPutCall;
 import cfrase49.nuclieyemapstest.APICalls.Put.AlertsPutCallInput;
 
-//TODO: Make Graph Prettier
-//TODO: change graph axis when alert is moved
 public class HistoryActivity extends AppCompatActivity {
     private String metric;
     private int machineID;
@@ -62,11 +60,16 @@ public class HistoryActivity extends AppCompatActivity {
 
         historyChart = (LineChart) findViewById(R.id.chart);
         historyChart.setBackgroundColor(getResources().getColor(R.color.chartBackground));
-        historyChart.setDescriptionColor(R.color.chartDescription);
+        historyChart.setDescriptionColor(getResources().getColor(R.color.chartDescription));
         historyChart.setDescription("Summary of " + metric + " over last 30 days");
         historyChart.setDescriptionTextSize(15);
         historyChart.getLegend().setTextSize(13);
+        historyChart.getLegend().setTextColor(getResources().getColor(R.color.legend));
         historyChart.setNoDataText("No Data is Available");
+        historyChart.getAxisLeft().setTextColor(getResources().getColor(R.color.axis));
+        historyChart.getAxisRight().setTextColor(getResources().getColor(R.color.axis));
+        historyChart.getXAxis().setTextColor(getResources().getColor(R.color.axis));
+        //historyChart.animateX(5000);
         getHistory();
     }
 
@@ -153,6 +156,8 @@ public class HistoryActivity extends AppCompatActivity {
             lowSet.setCircleRadius(5);
             lowSet.setColor(getResources().getColor(R.color.lowChartColour));
             lowSet.setCircleColor(getResources().getColor(R.color.lowChartColour));
+            lowSet.setCircleColorHole(getResources().getColor(R.color.background));
+            lowSet.setValueTextColor(getResources().getColor(R.color.progressNormal));
             lowSet.setDrawCubic(true);
 
             LineDataSet avgSet = new LineDataSet(avgEntries, "Daily Average");
@@ -161,6 +166,8 @@ public class HistoryActivity extends AppCompatActivity {
             avgSet.setCircleRadius(5);
             avgSet.setColor(getResources().getColor(R.color.avgChartColour));
             avgSet.setCircleColor(getResources().getColor(R.color.avgChartColour));
+            avgSet.setCircleColorHole(getResources().getColor(R.color.background));
+            avgSet.setValueTextColor(getResources().getColor(R.color.progressNormal));
             avgSet.setDrawCubic(true);
 
             LineDataSet highSet = new LineDataSet(highEntries, "Daily High");
@@ -169,11 +176,13 @@ public class HistoryActivity extends AppCompatActivity {
             highSet.setCircleRadius(5);
             highSet.setColor(getResources().getColor(R.color.highChartColour));
             highSet.setCircleColor(getResources().getColor(R.color.highChartColour));
+            highSet.setCircleColorHole(getResources().getColor(R.color.background));
+            highSet.setValueTextColor(getResources().getColor(R.color.progressNormal));
             highSet.setDrawCubic(true);
 
             LineDataSet alertSet = new LineDataSet(alert, "Alert Threshold");
             alertSet.setAxisDependency(YAxis.AxisDependency.LEFT);
-            alertSet.setLineWidth(5);
+            alertSet.setLineWidth(4);
             alertSet.setCircleRadius(0);
             alertSet.setColor(getResources().getColor(R.color.alertChartColour));
             alertSet.setDrawValues(false);

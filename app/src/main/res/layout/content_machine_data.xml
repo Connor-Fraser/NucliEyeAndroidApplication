@@ -18,7 +18,7 @@
 
         <TableRow
             android:layout_height="0px"
-            android:layout_weight="3.6">
+            android:layout_weight="1">
             <RelativeLayout android:id="@+id/TempLayout"
                 android:gravity="center_horizontal"
                 android:layout_weight="1"
@@ -38,8 +38,7 @@
 
                 <TextView android:id="@+id/TempThreshold"
                     style="@style/alertStyle"
-                    android:layout_toRightOf="@id/TempValue"
-                    android:layout_below="@id/TempHeader"/>
+                    android:layout_below="@id/TempValue"/>
             </RelativeLayout>
 
             <RelativeLayout android:id="@+id/HumidityLayout"
@@ -53,7 +52,8 @@
                 <TextView android:id="@+id/HumidityHeader"
                     style="@style/headingStyle"
                     android:text="@string/humidity"
-                    android:layout_alignParentTop="true" />
+                    android:layout_alignParentTop="true"
+                    android:paddingLeft="10dp"/>
 
                 <TextView android:id="@+id/HumidityValue"
                     style="@style/valueStyle"
@@ -61,14 +61,13 @@
 
                 <TextView android:id="@+id/HumidityThreshold"
                     style="@style/alertStyle"
-                    android:layout_toRightOf="@id/HumidityValue"
-                    android:layout_below="@id/HumidityHeader"/>
+                    android:layout_below="@id/HumidityValue"/>
             </RelativeLayout>
         </TableRow>
 
         <TableRow
             android:layout_height="0px"
-            android:layout_weight="3.6">
+            android:layout_weight="1">
 
             <RelativeLayout android:id="@+id/RadiationLayout"
                 android:gravity="center_horizontal"
@@ -81,22 +80,22 @@
                     style="@style/headingStyle"
                     android:text="@string/radiation"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true" />
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="24dp"/>
 
                 <TextView android:id="@+id/RadiationValue"
-                    style="@style/radValueStyle"
-                    android:layout_below="@id/RadiationHeader" />
+                    style="@style/valueStyle"
+                    android:layout_below="@id/RadiationHeader"/>
 
                 <TextView android:id="@+id/RadiationThreshold"
-                    style="@style/radAlertStyle"
-                    android:layout_toRightOf="@id/RadiationValue"
-                    android:layout_below="@id/RadiationHeader"/>
+                    style="@style/alertStyle"
+                    android:layout_below="@id/RadiationValue"/>
             </RelativeLayout>
         </TableRow>
 
         <TableRow
             android:layout_height="0px"
-            android:layout_weight="4.8">
+            android:layout_weight="1">
 
             <RelativeLayout android:id="@+id/CoLayout"
                 android:gravity="center_horizontal"
@@ -109,7 +108,8 @@
                     style="@style/headingStyle"
                     android:text="@string/co"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true" />
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="42dp"/>
 
                 <TextView android:id="@+id/CoValue"
                     style="@style/valueStyle"
@@ -117,8 +117,7 @@
 
                 <TextView android:id="@+id/CoThreshold"
                     style="@style/alertStyle"
-                    android:layout_toRightOf="@id/CoValue"
-                    android:layout_below="@id/CoHeader"/>
+                    android:layout_below="@id/CoValue"/>
             </RelativeLayout>
 
             <RelativeLayout android:id="@+id/Co2Layout"
@@ -133,7 +132,8 @@
                     style="@style/headingStyle"
                     android:text="@string/co2"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true" />
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="40dp" />
 
                 <TextView android:id="@+id/Co2Value"
                     style="@style/valueStyle"
@@ -141,22 +141,21 @@
 
                 <TextView android:id="@+id/Co2Threshold"
                     style="@style/alertStyle"
-                    android:layout_toRightOf="@id/Co2Value"
-                    android:layout_below="@id/Co2Header"/>
+                    android:layout_below="@id/Co2Value"/>
             </RelativeLayout>
         </TableRow>
         <TableRow
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="0.2">
 
             <TextView
-                style="@style/majorHeadingStyle"
+                style="@style/headingStyle"
                 android:paddingBottom="0dp"
                 android:textStyle="normal"
                 android:text="@string/timestamp" />
 
             <TextView android:id="@+id/timestampValue"
-                style="@style/majorHeadingStyle"
+                style="@style/headingStyle"
                 android:textStyle="normal"
                 android:layout_weight="1"
                 android:layout_width="0px" />

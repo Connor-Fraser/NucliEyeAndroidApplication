@@ -131,7 +131,7 @@ public class MachineDataActivity extends AppCompatActivity {
 
         temp = (TextView) findViewById(R.id.TempValue);
         if(currentDataResult.temp != null) {
-            textString = String.format("%.2f/", currentDataResult.temp);
+            textString = String.format("%.2f%s", currentDataResult.temp, getResources().getString(R.string.temp_units));
             if (currentDataResult.temp >= alerts.tempAlert)
                 temp.setTextColor(getResources().getColor(R.color.alert));
         }
@@ -143,7 +143,7 @@ public class MachineDataActivity extends AppCompatActivity {
 
         temp = (TextView) findViewById(R.id.HumidityValue);
         if(currentDataResult.humidity != null) {
-            textString = String.format("%.2f/", currentDataResult.humidity);
+            textString = String.format("%.2f%s", currentDataResult.humidity, getResources().getString(R.string.humidity_units));
             if (currentDataResult.humidity >= alerts.humidityAlert)
                 temp.setTextColor(getResources().getColor(R.color.alert));
         }
@@ -155,7 +155,7 @@ public class MachineDataActivity extends AppCompatActivity {
 
         temp = (TextView) findViewById(R.id.CoValue);
         if(currentDataResult.co != null) {
-            textString = String.format("%.2f/", currentDataResult.co);
+            textString = String.format("%.2f%s", currentDataResult.co, getResources().getString(R.string.co_units));
             if (currentDataResult.co >= alerts.coAlert)
                 temp.setTextColor(getResources().getColor(R.color.alert));
         }
@@ -167,7 +167,7 @@ public class MachineDataActivity extends AppCompatActivity {
 
         temp = (TextView) findViewById(R.id.Co2Value);
         if(currentDataResult.co2 != null) {
-            textString = String.format("%.2f/", currentDataResult.co2);
+            textString = String.format("%.2f%s", currentDataResult.co2, getResources().getString(R.string.co2_units));
             if (currentDataResult.co2 >= alerts.co2Alert)
                 temp.setTextColor(getResources().getColor(R.color.alert));
         }
@@ -179,7 +179,7 @@ public class MachineDataActivity extends AppCompatActivity {
 
         temp = (TextView) findViewById(R.id.RadiationValue);
         if(currentDataResult.radiation != null) {
-            textString = String.format("%.2f/", currentDataResult.radiation);
+            textString = String.format("%.2f%s", currentDataResult.radiation, getResources().getString(R.string.radiation_units));
             if (currentDataResult.radiation >= alerts.radiationAlert)
                 temp.setTextColor(getResources().getColor(R.color.alert));
         }

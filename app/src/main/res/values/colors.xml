@@ -4,11 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="black">#000000</color>
-    <color name="alert">#c21616</color>
-    <color name="chartDescription">#000000</color>
-    <color name="chartBackground">#FFFFFF</color>
+    <color name="alert">#9f1717</color>
+    <color name="chartDescription">#39d1ec</color>
+    <color name="legend">#39d1ec</color>
+    <color name="chartBackground">#124864</color>
+    <color name="axis">#39d1ec</color>
     <color name="lowChartColour">#27beaf</color>
     <color name="avgChartColour">#3bec0f</color>
     <color name="highChartColour">#224bf1</color>
     <color name="alertChartColour">#c21616</color>
+    <color name="progressBackground">#307291</color>
+    <color name="progressNormal">#39d1ec</color>
+    <color name="background">#124864</color>
 </resources>

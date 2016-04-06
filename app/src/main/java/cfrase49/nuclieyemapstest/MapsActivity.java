@@ -53,6 +53,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setIndoorEnabled(false);
+        mMap.getUiSettings().setScrollGesturesEnabled(false);
 
         MachineCallResults getMachines = new MachineCallResults();
         APIGetCall getMachinesCall = new MapsAPIGetCall(getMachines, getApplicationContext());
@@ -103,6 +105,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             int padding = 250; // offset from edges of the map in pixels
             CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
             mMap.animateCamera(cu);
+            mMap.getUiSettings().setScrollGesturesEnabled(true);
+
         }
     }
 }

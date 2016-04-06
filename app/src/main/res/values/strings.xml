@@ -6,7 +6,7 @@
     <string name="humidity_units">%</string>
     <string name="co_units">ppm</string>
     <string name="co2_units">ppm</string>
-    <string name="radiation_units">ppm</string>
+    <string name="radiation_units">mSv/hr</string>
     <string name="radiation">Radiation</string>
     <string name="temp">Temperature</string>
     <string name="humidity">Humidity</string>
@@ -17,7 +17,7 @@
     <string name="timestamp">Time of Data: </string>
     <string name="title_activity_history">Machine History</string>
     <string name="action_settings">Settings</string>
-    <string name="na_string">NA/</string>
+    <string name="na_string">"    NA"</string>
     <string name="alertFieldText">Alert Threshold:</string>
     <string name="changeButtonText">Change</string>
     <string name="selectText">Select a Machine</string>

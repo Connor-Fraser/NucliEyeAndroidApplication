@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/background</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -19,39 +20,24 @@
         <item name="android:layout_width">wrap_content</item>
     </style>
 
-    <style name="majorHeadingStyle" parent="generalStyle">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:paddingBottom">15dp</item>
-        <item name="android:paddingLeft">5dp</item>
-    </style>
-
     <style name="headingStyle" parent ="generalStyle">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/progressBackground</item>
         <item name="android:textStyle">bold</item>
         <item name="android:paddingBottom">15dp</item>
-        <item name="android:paddingLeft">6dp</item>
         <item name="android:textSize">18dp</item>
 
     </style>
 
     <style name="valueStyle" parent ="generalStyle">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/progressNormal</item>
         <item name="android:textSize">30dp</item>
     </style>
 
-    <style name="radValueStyle" parent="valueStyle">
-        <item name="android:textSize">27dp</item>
-    </style>
-
     <style name="alertStyle" parent ="generalStyle">
-        <item name="android:textColor">@color/alert</item>
+        <item name="android:textColor">@color/progressBackground</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">17dp</item>
-    </style>
-
-    <style name="radAlertStyle" parent="alertStyle">
-        <item name="android:textSize">14dp</item>
+        <item name="android:paddingLeft">20dp</item>
     </style>
 
 </resources>
